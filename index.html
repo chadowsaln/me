@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+       SWAP-ME: Replace every placeholder marked "SWAP-ME" below
+       (email, GitHub, LinkedIn) with your real handles. They all
+       live in this file — search for "SWAP-ME".
+       ============================================================ -->
+
+  <title>Shadow — Flutter Developer Building Modern Mobile Experiences</title>
+  <meta name="description" content="Shadow is a Flutter developer crafting beautiful, high-performance cross-platform mobile apps for Android and iOS with clean architecture and premium UI." />
+  <meta name="author" content="Shadow" />
+  <meta name="theme-color" content="#06070d" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shadow — Flutter Developer" />
+  <meta property="og:description" content="Beautiful, high-performance cross-platform mobile apps for Android and iOS." />
+  <meta property="og:url" content="https://shadow.dev/" /><!-- SWAP-ME -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23a78bff'/%3E%3Cstop offset='1' stop-color='%234dd8ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%2306070d'/%3E%3Cpath d='M40 18H26a8 8 0 0 0 0 16h12a8 8 0 0 1 0 16H22' fill='none' stroke='url(%23g)' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shadow",
+    "jobTitle": "Flutter Developer & UI Developer",
+    "url": "https://shadow.dev/",
+    "knowsAbout": ["Flutter", "Dart", "Firebase", "Supabase", "REST APIs", "BLoC", "Clean Architecture", "UI/UX"],
+    "sameAs": [
+      "https://github.com/shadow-dev",
+      "https://www.linkedin.com/in/shadow-dev"
+    ]
+  }
+  </script>
+
+  <script>
+    document.documentElement.classList.add("js");
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="atmosphere" aria-hidden="true">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <canvas id="particles"></canvas>
+  </div>
+
+  <header class="site-head">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Shadow — home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="brand-g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="var(--accent-1)" />
+              <stop offset="1" stop-color="var(--accent-2)" />
+            </linearGradient>
+          </defs>
+          <path d="M40 18H26a8 8 0 0 0 0 16h12a8 8 0 0 1 0 16H22" fill="none" stroke="url(#brand-g)" stroke-width="7" stroke-linecap="round" />
+        </svg>
+        <span class="brand-name">Shadow<span class="brand-dot">.</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a class="nav-cta" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 14.2A8.8 8.8 0 0 1 9.8 3.4a8.8 8.8 0 1 0 10.8 10.8Z"/></svg>
+        </button>
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="status reveal">
+            <span class="pulse" aria-hidden="true"></span>
+            Available for freelance projects
+          </p>
+          <p class="hello reveal">Hi, I'm Shadow <span class="wave" aria-hidden="true">👋</span></p>
+          <h1 id="hero-title" class="reveal">
+            Flutter Developer<br />
+            Building <span class="grad-text">Modern Mobile</span><br />
+            Experiences
+          </h1>
+          <p class="lede reveal">
+            I design and engineer cross-platform apps for Android &amp; iOS that feel
+            native, load instantly, and look like they came from a design studio —
+            because the code behind them is as clean as the pixels in front.
+          </p>
+          <div class="cta-row reveal">
+            <a class="btn btn-primary magnetic" href="#projects">
+              View My Work
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-6 6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost magnetic" href="#contact">Contact Me</a>
+          </div>
+          <dl class="hero-stats reveal">
+            <div><dt>Apps shipped</dt><dd data-count="12">12+</dd></div>
+            <div><dt>Platforms</dt><dd>Android · iOS</dd></div>
+            <div><dt>Focus</dt><dd>UI + Architecture</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="terminal glass">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span>
+              <em>main.dart</em>
+            </div>
+            <pre class="terminal-body"><code><span class="tk-kw">class</span> <span class="tk-cl">Shadow</span> <span class="tk-kw">extends</span> <span class="tk-cl">Developer</span> {
+  <span class="tk-kw">final</span> stack = [<span class="tk-st">'flutter'</span>, <span class="tk-st">'dart'</span>];
+  <span class="tk-kw">final</span> backend = <span class="tk-st">'firebase'</span>;
+
+  <span class="tk-ret">@override</span>
+  <span class="tk-cl">Widget</span> build(<span class="tk-cl">BuildContext</span> ctx) {
+    <span class="tk-kw">return</span> <span class="tk-cl">PixelPerfectApp</span>(
+      performance: <span class="tk-num">60fps</span>,
+      architecture: <span class="tk-st">'clean'</span>,
+    );
+  }
+}<span class="caret"></span></code></pre>
+          </div>
+          <div class="chip chip-a glass">📱 Android</div>
+          <div class="chip chip-b glass">🍎 iOS</div>
+          <div class="chip chip-c glass">⚡ 60 fps</div>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#about" aria-label="Scroll to about section">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index">01</span>
+          <h2 id="about-title">About Me</h2>
+          <span class="rule" aria-hidden="true"></span>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p class="about-lede">
+              I'm a passionate <strong>Flutter developer</strong> who treats every app
+              like a flagship product — obsessed with the details users feel but
+              never notice.
+            </p>
+            <p>
+              My work sits at the intersection of engineering and design: state
+              management that stays predictable as features grow, architectures
+              that welcome change instead of fighting it, and interfaces polished
+              down to the last easing curve.
+            </p>
+            <p>
+              When I'm not shipping apps, I'm usually deep in robotics, tinkering
+              with electronics, or exploring cybersecurity CTFs — the same
+              curiosity that science fiction planted early and never let go of.
+            </p>
+          </div>
+
+          <ul class="about-pillars" role="list">
+            <li class="glass reveal">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.3 5.6.7-4.2 3.9 1.1 5.6L12 15.8 7.1 18.5l1.1-5.6L4 9l5.6-.7z"/></svg>
+              <h3>Beautiful UI</h3>
+              <p>Pixel-perfect screens with motion that feels physical, not decorative.</p>
+            </li>
+            <li class="glass reveal">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M13 4l-2 16"/></svg>
+              <h3>Clean Architecture</h3>
+              <p>Layered, testable codebases where every dependency points the right way.</p>
+            </li>
+            <li class="glass reveal">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5H11L9.5 22 19 9.5h-6.5z"/></svg>
+              <h3>High Performance</h3>
+              <p>Constant frame rates, tiny budgets, zero-jank scrolling on real devices.</p>
+            </li>
+            <li class="glass reveal">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="12" height="14" rx="2.5"/><rect x="14" y="8" width="7" height="11" rx="2"/></svg>
+              <h3>Cross-platform</h3>
+              <p>One codebase, two stores — Android and iOS from a single source of truth.</p>
+            </li>
+            <li class="glass reveal">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V9m5.5 11V4M15 20v-8m5.5 8V7"/></svg>
+              <h3>Scalable Apps</h3>
+              <p>BLoC-driven systems ready for feature teams, not just demos.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index">02</span>
+          <h2 id="skills-title">Skills &amp; Stack</h2>
+          <span class="rule" aria-hidden="true"></span>
+        </header>
+
+        <ul class="skills-grid" role="list">
+          <li class="skill glass reveal" style="--d:0">
+            <div class="skill-top">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 3.5 8 12l4.5 1L9.5 20.5 17 10.5l-4.8-.9z"/><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H17l3 3v14.5A2.5 2.5 0 0 1 17.5 22" fill="none"/></svg>
+              <h3>Flutter</h3>
+            </div>
+            <p>Widgets, animations, platform channels.</p>
+            <div class="bar" style="--lvl:.95" aria-hidden="true"><i></i></div>
+            <span class="sr-only">Expert level</span>
+          </li>
+          <li class="skill glass reveal" style="--d:1">
+            <div class="skill-top">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6"/></svg>
+              <h3>Dart</h3>
+            </div>
+            <p>Null-safety, isolates, streams, extensions.</p>
+            <div class="bar" style="--lvl:.92" aria-hidden="true"><i></i></div>
+            <span class="sr-only">Expert level</span>
+          </li>
+          <li class="skill glass reveal" style="--d:2">
+            <div class="skill-top">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5c3 .5 4 2 5.5 5 1.5-3 2.5-4.5 5.5-5-1 3-2 4.5-4 6 2 1.5 3 3 4 6-3-.5-4-2-5.5-5-1.5 3-2.5 4.5-5.5 5 1-3 2-4.5 4-6-2-1.5-3-3-4-6z"/></svg>
+              <h3>Firebase</h3>
+            </div>
+            <p>Auth, Firestore, FCM, remote config.</p>
+            <div class="bar" style="--lvl:.88" aria-hidden="true"><i></i></div>
+            <span class="sr-only">Advanced level</span>
+          </li>
+          <li class="skill glass reveal" style="--d:3">
+            <div class="skill-top">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5zM3 13l9 5 9-5" fill="none"/><circle cx="12" cy="8" r="1.6"/></svg>
+              <h3>Supabase</h3>
+            </div>
+            <p>Postgres, RLS, edge functions, realtime.</p>
+            <div class="bar" style="--lvl:.85" aria-hidden="true"><i></i></div>
+            <span class="sr-only">Advanced level</span>
+          </li>
+          <li class="skill glass reveal" style="--d:4">
+            <div class="skill-top">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none"/><path d="M3.5 9.5h17M3.5 14.5h17M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" fill="none"/></svg>
+              <h3>REST APIs</h3>
+            </div>
+            <p>Dio, interceptors, retry &amp; caching strategy.</p>
+            <div class="bar" style="--lvl:.9" aria-hidden="true"><i></i></div>
+            <span class="sr-only">Expert level</span>
+          </li>
+          <li class="skill glass reveal" style="--d:5">
+            <div class="skill-top">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7.5" ry="3" fill="none"/><path d="M4.5 6v12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3" fill="none"/></svg>
+              <h3>BLoC / Cubit</h3>
+            </div>
+            <p>Event-driven state, sealed classes, testing.</p>
+            <div class="bar" style="--lvl:.93" aria-hidden="true"><i></i></div>
+            <span class="sr-only">Expert level</span>
+          </li>
+          <li class="skill glass reveal" style="--d:6">
+            <div class="skill-top">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7z" fill="none"/><path d="M12 12 3 7m9 5 9-5m-9 5v10"/></svg>
+              <h3>Clean Architecture</h3>
+            </div>
+            <p>Domain first, DI, repository patterns.</p>
+            <div class="bar" style="--lvl:.9" aria-hidden="true"><i></i></div>
+            <span class="sr-only">Expert level</span>
+          </li>
+          <li class="skill glass reveal" style="--d:7">
+            <div class="skill-top">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2.6"/><circle cx="6" cy="18" r="2.6"/><circle cx="18" cy="9" r="2.6"/><path d="M6 8.6v6.8M8.6 6h4.4a2 2 0 0 1 2 2v.6m0 6.8v.6a2 2 0 0 1-2 2H8.6" fill="none"/></svg>
+              <h3>Git &amp; GitHub</h3>
+            </div>
+            <p>Trunk-based flow, reviews, CI actions.</p>
+            <div class="bar" style="--lvl:.88" aria-hidden="true"><i></i></div>
+            <span class="sr-only">Advanced level</span>
+          </li>
+          <li class="skill glass reveal" style="--d:8">
+            <div class="skill-top">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7c0 3 2 5 2 7h10c0-2 2-4 2-7a7 7 0 0 0-7-7zM9.5 21h5" fill="none"/></svg>
+              <h3>UI/UX</h3>
+            </div>
+            <p>Design systems, prototyping, micro-interactions.</p>
+            <div class="bar" style="--lvl:.86" aria-hidden="true"><i></i></div>
+            <span class="sr-only">Advanced level</span>
+          </li>
+          <li class="skill glass reveal" style="--d:9">
+            <div class="skill-top">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17c2-6 5-6 7 0m3 0c1.4-4 3.6-4 5 0M4 8.5C6 5 8.5 4.5 12 6.5 15.5 4.5 18 5 20 8.5" fill="none"/></svg>
+              <h3>State Management</h3>
+            </div>
+            <p>Riverpod exposure, provider scoping, immutability.</p>
+            <div class="bar" style="--lvl:.87" aria-hidden="true"><i></i></div>
+            <span class="sr-only">Advanced level</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index">03</span>
+          <h2 id="projects-title">Selected Work</h2>
+          <span class="rule" aria-hidden="true"></span>
+        </header>
+
+        <div class="project-grid">
+
+          <article class="project glass reveal">
+            <div class="project-media media-a" aria-hidden="true">
+              <span class="monogram">SS</span>
+              <svg class="device" viewBox="0 0 120 200"><rect x="30" y="10" width="60" height="180" rx="12" fill="none" stroke="currentColor" stroke-width="3"/><line x1="50" y1="22" x2="70" y2="22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="52" cy="150" r="14" fill="none" stroke="currentColor" stroke-width="3"/><path d="M45 150l5 5 9-10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="project-body">
+              <h3>Study Stash</h3>
+              <p>Gamified Pomodoro &amp; productivity app — focus sessions that level you up, streaks that keep you honest.</p>
+              <ul class="tags" role="list">
+                <li>Flutter</li><li>Firebase</li><li>BLoC</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" aria-label="Study Stash live demo (coming soon)">Live Demo<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H9m8 0v8"/></svg></a>
+                <a href="#" aria-label="Study Stash on GitHub">GitHub<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5A3.9 3.9 0 0 1 6.8 8.7a3.6 3.6 0 0 1 .1-2.7s.9-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1a3.6 3.6 0 0 1 .1 2.7 3.9 3.9 0 0 1 1 2.8c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project glass reveal">
+            <div class="project-media media-b" aria-hidden="true">
+              <span class="monogram">VB</span>
+              <svg class="device" viewBox="0 0 120 200"><rect x="30" y="10" width="60" height="180" rx="12" fill="none" stroke="currentColor" stroke-width="3"/><path d="M42 70h36l-4 40a14 14 0 0 1-28 0z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M46 62c0-6 8-6 8-12m8 12c0-6 8-6 8-12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+            </div>
+            <div class="project-body">
+              <h3>Velvet &amp; Brew</h3>
+              <p>Modern coffee-ordering app — browse roasts, customize brews, track pickup in real time. Velvet-smooth checkout.</p>
+              <ul class="tags" role="list">
+                <li>Flutter</li><li>Supabase</li><li>Restaurants&nbsp;UI</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" aria-label="Velvet and Brew live demo (coming soon)">Live Demo<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H9m8 0v8"/></svg></a>
+                <a href="#" aria-label="Velvet and Brew on GitHub">GitHub<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5A3.9 3.9 0 0 1 6.8 8.7a3.6 3.6 0 0 1 .1-2.7s.9-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1a3.6 3.6 0 0 1 .1 2.7 3.9 3.9 0 0 1 1 2.8c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project glass reveal">
+            <div class="project-media media-c" aria-hidden="true">
+              <span class="monogram">CM</span>
+              <svg class="device" viewBox="0 0 120 200"><rect x="25" y="35" width="70" height="90" rx="10" fill="none" stroke="currentColor" stroke-width="3"/><path d="M37 105V80m14 25V65m14 40V88" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M55 25h10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+            </div>
+            <div class="project-body">
+              <h3>Coffee Manager</h3>
+              <p>Dashboard &amp; management system for coffee businesses — sales analytics, inventory alerts, staff overview.</p>
+              <ul class="tags" role="list">
+                <li>Flutter Web</li><li>REST API</li><li>Clean Arch</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" aria-label="Coffee Manager live demo (coming soon)">Live Demo<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H9m8 0v8"/></svg></a>
+                <a href="#" aria-label="Coffee Manager on GitHub">GitHub<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5A3.9 3.9 0 0 1 6.8 8.7a3.6 3.6 0 0 1 .1-2.7s.9-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1a3.6 3.6 0 0 1 .1 2.7 3.9 3.9 0 0 1 1 2.8c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project glass reveal">
+            <div class="project-media media-d" aria-hidden="true">
+              <span class="monogram">OS</span>
+              <svg class="device" viewBox="0 0 120 200"><rect x="30" y="10" width="60" height="180" rx="12" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="60" cy="90" r="22" fill="none" stroke="currentColor" stroke-width="3"/><path d="M60 68v44M38 90h44M45 75l30 30M75 75 45 105" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <div class="project-body">
+              <h3>LifeOS</h3>
+              <p>Personal productivity &amp; life-management system — goals, habits, journaling and reviews in one offline-first app.</p>
+              <ul class="tags" role="list">
+                <li>Flutter</li><li>Supabase</li><li>Riverpod</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" aria-label="LifeOS live demo (coming soon)">Live Demo<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H9m8 0v8"/></svg></a>
+                <a href="#" aria-label="LifeOS on GitHub">GitHub<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5A3.9 3.9 0 0 1 6.8 8.7a3.6 3.6 0 0 1 .1-2.7s.9-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1a3.6 3.6 0 0 1 .1 2.7 3.9 3.9 0 0 1 1 2.8c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ JOURNEY ============ -->
+    <section class="section" id="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index">04</span>
+          <h2 id="journey-title">The Journey</h2>
+          <span class="rule" aria-hidden="true"></span>
+        </header>
+
+        <ol class="timeline" role="list">
+          <li class="tl-item reveal">
+            <div class="tl-card glass">
+              <span class="tl-year">The spark</span>
+              <h3>Programming fundamentals</h3>
+              <p>First lines of code turned into a habit. Algorithms, problem-solving, and the realization that software is a superpower worth mastering.</p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <div class="tl-card glass">
+              <span class="tl-year">Level up</span>
+              <h3>Discovered Flutter &amp; Dart</h3>
+              <p>One framework clicked instantly — hot reload, expressive widgets, and the promise of true cross-platform from a single codebase.</p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <div class="tl-card glass">
+              <span class="tl-year">Going deeper</span>
+              <h3>State management mastery</h3>
+              <p>From setState chaos to BLoC/Cubit discipline — event-driven architecture, sealed states, and apps whose logic can be tested blindfolded.</p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <div class="tl-card glass">
+              <span class="tl-year">Full-stack reach</span>
+              <h3>Firebase, Supabase &amp; REST APIs</h3>
+              <p>Auth, realtime databases, push notifications and clean API layers — complete products, not just pretty frontends.</p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <div class="tl-card glass">
+              <span class="tl-year">Craft mode</span>
+              <h3>Clean Architecture &amp; design systems</h3>
+              <p>Layered architectures, dependency injection, reusable component libraries — codebases built to survive their own success.</p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <div class="tl-card glass">
+              <span class="tl-year">Now</span>
+              <h3>Shipping for clients</h3>
+              <p>Taking products from idea to store — production Flutter apps with premium UI for Android and iOS, built to attract and keep users.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ WHY ME ============ -->
+    <section class="section" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index">05</span>
+          <h2 id="why-title">Why Work With Me?</h2>
+          <span class="rule" aria-hidden="true"></span>
+        </header>
+
+        <ol class="why-list" role="list">
+          <li class="reveal">
+            <span class="why-num" aria-hidden="true">01</span>
+            <div>
+              <h3>Modern &amp; beautiful UI</h3>
+              <p>Interfaces your users screenshot and share — current design language, custom animations, zero template smell.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="why-num" aria-hidden="true">02</span>
+            <div>
+              <h3>Clean &amp; maintainable code</h3>
+              <p>Solid architecture, meaningful tests, documentation. Hand the project to any future dev without fear.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="why-num" aria-hidden="true">03</span>
+            <div>
+              <h3>Responsive communication</h3>
+              <p>Fast replies, weekly demos, honest estimates. You always know exactly where your project stands.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="why-num" aria-hidden="true">04</span>
+            <div>
+              <h3>True cross-platform delivery</h3>
+              <p>One investment, both stores. Consistent behavior across Android and iOS with platform-aware polish.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="why-num" aria-hidden="true">05</span>
+            <div>
+              <h3>Performance-first mindset</h3>
+              <p>Profiled on real devices — smooth 60fps interactions, fast cold starts, battery-friendly background work.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index">06</span>
+          <h2 id="contact-title">Let's Build Something <span class="grad-text">Amazing</span></h2>
+          <span class="rule" aria-hidden="true"></span>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p class="contact-lede">
+              Have an app idea, a product that needs a mobile home, or a Flutter
+              codebase that needs rescue? Tell me about it — I reply within 24 hours.
+            </p>
+            <ul class="contact-channels" role="list">
+              <li>
+                <a href="mailto:contact@shadow.dev"><!-- SWAP-ME email -->
+                  <span class="ch-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none"/><path d="m4 7 8 6 8-6" fill="none"/></svg></span>
+                  <span><em>Email</em>contact@shadow.dev</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shadow-dev" target="_blank" rel="noopener"><!-- SWAP-ME github -->
+                  <span class="ch-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5A3.9 3.9 0 0 1 6.8 8.7a3.6 3.6 0 0 1 .1-2.7s.9-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1a3.6 3.6 0 0 1 .1 2.7 3.9 3.9 0 0 1 1 2.8c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></span>
+                  <span><em>GitHub</em>github.com/shadow-dev</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/shadow-dev" target="_blank" rel="noopener"><!-- SWAP-ME linkedin -->
+                  <span class="ch-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" fill="none"/><path d="M8 10.5V17M8 7.4v.2M12 17v-4a2.4 2.4 0 0 1 4.8 0v4" fill="none" stroke-linecap="round"/></svg></span>
+                  <span><em>LinkedIn</em>linkedin.com/in/shadow-dev</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact-form glass reveal" id="contact-form" novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="cf-name">Name</label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Ada Lovelace" />
+              </div>
+              <div class="field">
+                <label for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" required placeholder="ada@example.com" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="cf-type">Project type</label>
+              <select id="cf-type" name="type">
+                <option value="New mobile app">New mobile app</option>
+                <option value="Flutter redesign / rescue">Flutter redesign / rescue</option>
+                <option value="Feature development">Feature development</option>
+                <option value="Consulting / code review">Consulting / code review</option>
+                <option value="Something else">Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" required placeholder="Tell me about your idea, timeline, and budget range…"></textarea>
+            </div>
+            <p class="form-status" id="form-status" role="status"></p>
+            <button class="btn btn-primary btn-wide" type="submit">
+              Send Message
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 18-8-8 18-2.5-7.5z"/></svg>
+            </button>
+            <p class="form-note">Opens your email client — no data leaves this page.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <a class="brand brand-sm" href="#top" aria-label="Shadow — back to top">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M40 18H26a8 8 0 0 0 0 16h12a8 8 0 0 1 0 16H22" fill="none" stroke="var(--accent-1)" stroke-width="7" stroke-linecap="round"/></svg>
+        Shadow<span class="brand-dot">.</span>
+      </a>
+      <p class="footer-note">© <span id="year">2026</span> Shadow — crafted with Flutter-grade precision.</p>
+      <ul class="socials" role="list">
+        <li><a href="https://github.com/shadow-dev" target="_blank" rel="noopener" aria-label="GitHub"><!-- SWAP-ME github --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5A3.9 3.9 0 0 1 6.8 8.7a3.6 3.6 0 0 1 .1-2.7s.9-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1a3.6 3.6 0 0 1 .1 2.7 3.9 3.9 0 0 1 1 2.8c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/shadow-dev" target="_blank" rel="noopener" aria-label="LinkedIn"><!-- SWAP-ME linkedin --><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" fill="none"/><path d="M8 10.5V17M8 7.4v.2M12 17v-4a2.4 2.4 0 0 1 4.8 0v4" fill="none" stroke-linecap="round"/></svg></a></li>
+        <li><a href="mailto:contact@shadow.dev" aria-label="Email"><!-- SWAP-ME email --><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none"/><path d="m4 7 8 6 8-6" fill="none"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
