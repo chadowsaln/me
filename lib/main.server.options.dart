@@ -5,9 +5,7 @@
 // Generated with jaspr_builder
 
 import 'package:jaspr/server.dart';
-import 'package:shadow_dev_portfolio/components/counter.dart' as _counter;
-import 'package:shadow_dev_portfolio/constants/theme.dart' as _theme;
-import 'package:shadow_dev_portfolio/pages/about.dart' as _about;
+import 'package:shadow_dev_portfolio/core/global_styles.dart' as _global_styles;
 import 'package:shadow_dev_portfolio/app.dart' as _app;
 
 /// Default [ServerOptions] for use with your Jaspr project.
@@ -29,10 +27,5 @@ import 'package:shadow_dev_portfolio/app.dart' as _app;
 ServerOptions get defaultServerOptions => ServerOptions(
   clientId: 'main.client.dart.js',
   clients: {_app.App: ClientTarget<_app.App>('app')},
-  styles: () => [
-    ..._theme.styles,
-    ..._app.AppState.styles,
-    ..._counter.CounterState.styles,
-    ..._about.About.styles,
-  ],
+  styles: () => [..._global_styles.globalStyles],
 );
