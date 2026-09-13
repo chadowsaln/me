@@ -1,15 +1,48 @@
-# jasprsite
+# Shadow Dev — Portfolio
 
-A new Jaspr project
+Personal developer portfolio for **Shadow Dev** (Flutter Developer & Software Engineer).
 
-## Running the project
+Built with plain **HTML5, CSS3, and vanilla JavaScript** — no frameworks, no build step, no dependencies.
 
-Run your project using `jaspr serve`.
+## Stack
 
-The development server will be available on `http://localhost:8080`.
+- HTML5 with semantic landmarks and accessible navigation
+- CSS3 custom properties, glassmorphism, dark futuristic theme
+- Vanilla JavaScript: mobile menu, scroll spy, scroll reveal, form validation
+- SEO: Open Graph, Twitter cards, JSON-LD structured data
 
-## Building the project
+## Structure
 
-Build your project using `jaspr build`.
+```
+.
+├── index.html         # All content and sections
+├── style.css          # Design tokens, layout, components
+├── script.js          # Interactivity (vanilla, no libraries)
+├── assets/
+│   └── images/
+│       └── favicon.svg
+└── vercel.json        # Static deploy config (root = site root)
+```
 
-The output will be located inside the `build/jaspr/` directory.
+## Run locally
+
+Any static server works. For example:
+
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000
+```
+
+## Deploy to Vercel
+
+The repo root is the site root, so Vercel deploys the static files as-is:
+
+1. Import the repository on [vercel.com](https://vercel.com).
+2. Framework preset: **Other** — no build command, no output directory (see `vercel.json`).
+3. Deploy.
+
+## Notes
+
+- No backend is connected yet, so the contact form validates inputs client-side only
+  and does not send email. Placeholder links (LinkedIn, Email, project links) are marked
+  "coming soon" until real URLs exist.

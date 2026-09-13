@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Shadow Dev — Flutter Developer &amp; Software Engineer</title>
+  <meta name="description" content="Shadow Dev is a Flutter Developer & Software Engineer building polished applications with Flutter and Dart, exploring backend development, databases, and cybersecurity." />
+  <meta name="author" content="Shadow Dev" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#05060f" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Shadow Dev" />
+  <meta property="og:title" content="Shadow Dev — Flutter Developer &amp; Software Engineer" />
+  <meta property="og:description" content="Building polished applications with Flutter and Dart, exploring backend development, databases, and cybersecurity." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Shadow Dev — Flutter Developer &amp; Software Engineer" />
+  <meta name="twitter:description" content="Building polished applications with Flutter and Dart, exploring backend development, databases, and cybersecurity." />
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Structured data: truthful, no invented URLs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shadow Dev",
+    "jobTitle": "Flutter Developer & Software Engineer",
+    "knowsAbout": ["Flutter", "Dart", "Python", "Supabase", "SQL", "Firebase", "Git", "GitHub", "REST APIs"],
+    "sameAs": ["https://github.com/shadow-dev"]
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Ambient background -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg-glow bg-glow-a"></div>
+    <div class="bg-glow bg-glow-b"></div>
+    <div class="bg-grid"></div>
+  </div>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#home" aria-label="Shadow Dev — home">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <defs>
+            <linearGradient id="brand-g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#a78bfa" />
+              <stop offset="1" stop-color="#22d3ee" />
+            </linearGradient>
+          </defs>
+          <rect x="1.5" y="1.5" width="37" height="37" rx="10" fill="none" stroke="url(#brand-g)" stroke-width="2" />
+          <path d="M24.5 13.5 31 20l-6.5 6.5" fill="none" stroke="url(#brand-g)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+          <line x1="15" y1="24" x2="28" y2="24" stroke="url(#brand-g)" stroke-width="2.4" stroke-linecap="round" />
+        </svg>
+        <span class="brand-name">Shadow <span class="brand-accent">Dev</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a class="nav-link is-active" href="#home" aria-current="page">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link nav-cta" href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+        <span class="menu-bar" aria-hidden="true"></span>
+        <span class="menu-bar" aria-hidden="true"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ========== HERO ========== -->
+    <section class="hero section" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="hero-badge" data-reveal>
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Available for opportunities
+          </p>
+          <h1 class="hero-title" id="hero-title" data-reveal>
+            Building <span class="grad-text">Digital Experiences</span> That Matter.
+          </h1>
+          <p class="hero-lede" data-reveal>
+            Hi, I'm <strong>Shadow Dev</strong> — a Flutter Developer &amp; Software Engineer.
+          </p>
+          <p class="hero-sub" data-reveal>
+            Building polished applications with Flutter and Dart, exploring backend development,
+            databases, and cybersecurity.
+          </p>
+          <div class="hero-actions" data-reveal>
+            <a class="btn btn-primary" href="#projects">
+              View Projects
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-6 6 6-6 6" /></svg>
+            </a>
+            <a class="btn btn-ghost" href="#contact">Contact Me</a>
+          </div>
+          <ul class="hero-socials" role="list" aria-label="Social links" data-reveal>
+            <li>
+              <a class="social-link" href="https://github.com/shadow-dev" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5A3.9 3.9 0 0 1 6.8 8.7a3.6 3.6 0 0 1 .1-2.7s.9-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1a3.6 3.6 0 0 1 .1 2.7 3.9 3.9 0 0 1 1 2.8c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z" /></svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-link is-soon" href="#" aria-label="LinkedIn (coming soon)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" /><path d="M8 10.5V17M8 7.4v.2M12 17v-4a2.4 2.4 0 0 1 4.8 0v4" /></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true" data-reveal>
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="code-card">
+            <div class="code-bar">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <em>main.dart</em>
+            </div>
+            <pre class="code"><code><span class="tk-kw">class</span> <span class="tk-name">ShadowDev</span> <span class="tk-kw">extends</span> <span class="tk-name">Developer</span> {
+  <span class="tk-kw">final</span> focus = <span class="tk-str">'Flutter &amp; Dart'</span>;
+  <span class="tk-kw">final</span> stack = {<span class="tk-str">'ui'</span>, <span class="tk-str">'backend'</span>, <span class="tk-str">'security'</span>};
+
+  <span class="tk-name">Widget</span> build() {
+    <span class="tk-kw">return</span> <span class="tk-name">App</span>(
+      performant: <span class="tk-bool">true</span>,
+      polished: <span class="tk-bool">true</span>,
+    );
+  }
+}<span class="caret"></span></code></pre>
+          </div>
+          <span class="chip chip-a">Flutter</span>
+          <span class="chip chip-b">Dart</span>
+          <span class="chip chip-c">Supabase</span>
+          <span class="chip chip-d">Firebase</span>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#about" data-reveal aria-label="Scroll to About section">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6" /></svg>
+      </a>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="section-index">01</span>
+          <h2 class="section-title" id="about-title">About Me</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-copy" data-reveal>
+            <p class="about-lede">
+              I'm a <strong>Flutter Developer &amp; Software Engineer</strong> who treats every
+              app like a flagship product — obsessed with the details users feel but never notice.
+            </p>
+            <p>
+              My work sits at the intersection of engineering and design: state management that
+              stays predictable as features grow, architectures that welcome change instead of
+              fighting it, and interfaces polished down to the last easing curve.
+            </p>
+            <p>
+              Right now I'm focusing on the backend side of things — databases, APIs, and
+              cybersecurity fundamentals — so I can build complete products, not just pretty
+              frontends.
+            </p>
+            <p>
+              When I'm not shipping apps, I'm usually deep in robotics, tinkering with
+              electronics, or exploring security challenges — the same curiosity that got me into
+              programming never really left.
+            </p>
+          </div>
+
+          <ul class="about-points" role="list" aria-label="Development interests">
+            <li class="glass-card" data-reveal>
+              <span class="point-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M14.5 3.5 8 12l4.5 1L9.5 20.5 17 10.5l-4.8-.9z" /><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H17l3 3v14.5A2.5 2.5 0 0 1 17.5 22" /></svg>
+              </span>
+              <div>
+                <h3>Flutter &amp; Dart</h3>
+                <p>Cross-platform apps with clean architecture and custom UI.</p>
+              </div>
+            </li>
+            <li class="glass-card" data-reveal>
+              <span class="point-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7.5" ry="3" /><path d="M4.5 6v12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3" /></svg>
+              </span>
+              <div>
+                <h3>Backend &amp; Databases</h3>
+                <p>Supabase, Firebase, and SQL for complete product backends.</p>
+              </div>
+            </li>
+            <li class="glass-card" data-reveal>
+              <span class="point-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2 4 7v10l8 5 8-5V7z" /><path d="M12 12l8-5m-8 5 8 5m-8-5-8-5m8 5v10" /></svg>
+              </span>
+              <div>
+                <h3>Cybersecurity</h3>
+                <p>Learning the security fundamentals behind every product I ship.</p>
+              </div>
+            </li>
+            <li class="glass-card" data-reveal>
+              <span class="point-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3l2.4 5.3 5.6.7-4.2 3.9 1.1 5.6L12 15.8 7.1 18.5l1.1-5.6L4 9l5.6-.7z" /></svg>
+              </span>
+              <div>
+                <h3>Polished UI</h3>
+                <p>Animations, motion, and detail that make apps feel premium.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="section-index">02</span>
+          <h2 class="section-title" id="projects-title">Featured Projects</h2>
+        </header>
+
+        <div class="project-grid" role="list">
+          <article class="project-card glass-card" role="listitem" data-reveal>
+            <div class="project-media media-velvet" aria-hidden="true">
+              <span class="monogram">V&amp;B</span>
+              <svg viewBox="0 0 120 120"><path d="M28 40h64l-8 48a16 16 0 0 1-48 0z" /><path d="M40 34a8 8 0 0 1 8 8M48 30a8 8 0 0 1 8 8M56 34a8 8 0 0 1 8 8" /></svg>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Velvet &amp; Brew</h3>
+              <p class="project-desc">Coffee ordering and management application built with Flutter and Supabase.</p>
+              <ul class="tags" role="list">
+                <li>Flutter</li>
+                <li>Supabase</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn-sm btn-ghost is-soon" href="#" aria-label="Velvet and Brew — View Project (coming soon)">
+                  View Project
+                  <span class="soon-tag">coming soon</span>
+                </a>
+                <a class="btn btn-sm btn-ghost is-soon" href="#" aria-label="Velvet and Brew — GitHub (coming soon)">
+                  GitHub
+                  <span class="soon-tag">coming soon</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card" role="listitem" data-reveal>
+            <div class="project-media media-stash" aria-hidden="true">
+              <span class="monogram">SS</span>
+              <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="34" /><path d="M60 44v16l10 6" /></svg>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Study Stash</h3>
+              <p class="project-desc">Offline-first Pomodoro productivity application built with Flutter and Dart.</p>
+              <ul class="tags" role="list">
+                <li>Flutter</li>
+                <li>Dart</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn-sm btn-ghost is-soon" href="#" aria-label="Study Stash — View Project (coming soon)">
+                  View Project
+                  <span class="soon-tag">coming soon</span>
+                </a>
+                <a class="btn btn-sm btn-ghost is-soon" href="#" aria-label="Study Stash — GitHub (coming soon)">
+                  GitHub
+                  <span class="soon-tag">coming soon</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card" role="listitem" data-reveal>
+            <div class="project-media media-installer" aria-hidden="true">
+              <span class="monogram">FI</span>
+              <svg viewBox="0 0 120 120"><path d="M60 22v44m-16-16 16 16 16-16" /><path d="M34 82h52" /></svg>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Flutter Installer</h3>
+              <p class="project-desc">Desktop application for Flutter SDK installation and management.</p>
+              <ul class="tags" role="list">
+                <li>Flutter</li>
+                <li>Dart</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn-sm btn-ghost is-soon" href="#" aria-label="Flutter Installer — View Project (coming soon)">
+                  View Project
+                  <span class="soon-tag">coming soon</span>
+                </a>
+                <a class="btn btn-sm btn-ghost is-soon" href="#" aria-label="Flutter Installer — GitHub (coming soon)">
+                  GitHub
+                  <span class="soon-tag">coming soon</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="section-index">03</span>
+          <h2 class="section-title" id="skills-title">Skills &amp; Stack</h2>
+        </header>
+
+        <ul class="skills-grid" role="list">
+          <li class="skill-card glass-card" data-reveal>
+            <span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.5 3.5 8 12l4.5 1L9.5 20.5 17 10.5l-4.8-.9z" /><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H17l3 3v14.5A2.5 2.5 0 0 1 17.5 22" /></svg></span>
+            <h3>Flutter</h3>
+            <p>Cross-platform UI, widgets, and animations.</p>
+          </li>
+          <li class="skill-card glass-card" data-reveal>
+            <span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="13" height="13" rx="3" /><path d="M9.5 20.5 6 17l3.5-3.5M14.5 20.5 18 17l-3.5-3.5" /></svg></span>
+            <h3>Dart</h3>
+            <p>The typed language powering every Flutter app.</p>
+          </li>
+          <li class="skill-card glass-card" data-reveal>
+            <span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M11 10V4c0-1.1 5.5-.6 5.5 3.2 0 2.6-1.7 3.6-4 3.6H8" /><path d="M13 14v6c0 1.1-5.5.6-5.5-3.2 0-2.6 1.7-3.6 4-3.6h3" /></svg></span>
+            <h3>Python</h3>
+            <p>Scripts, tooling, and backend exploration.</p>
+          </li>
+          <li class="skill-card glass-card" data-reveal>
+            <span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5 19 12 5 19z" /><path d="M13.5 6.5 19 9v6l-5.5 2.5M9 8v8" /></svg></span>
+            <h3>Supabase</h3>
+            <p>Postgres, auth, storage, and realtime.</p>
+          </li>
+          <li class="skill-card glass-card" data-reveal>
+            <span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7.5" ry="3" /><path d="M4.5 6v12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3" /></svg></span>
+            <h3>SQL</h3>
+            <p>Queries, schemas, and data modeling.</p>
+          </li>
+          <li class="skill-card glass-card" data-reveal>
+            <span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h14v8a6 6 0 0 1-12 0z" /><path d="M6 22c2-6 5-6 7 0" /><path d="M18 6h2v6h-2" /></svg></span>
+            <h3>Firebase</h3>
+            <p>Auth, Firestore, and the analytics ecosystem.</p>
+          </li>
+          <li class="skill-card glass-card" data-reveal>
+            <span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.6" /><circle cx="6" cy="18" r="2.6" /><circle cx="18" cy="9" r="2.6" /><path d="M6 8.6v6.8M8.6 6h4.4a2 2 0 0 1 2 2v.6m0 6.8v.6a2 2 0 0 1-2 2H8.6" /></svg></span>
+            <h3>Git &amp; GitHub</h3>
+            <p>Version control and collaborative workflows.</p>
+          </li>
+          <li class="skill-card glass-card" data-reveal>
+            <span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6" /><path d="M14 3l-4 18" /></svg></span>
+            <h3>REST APIs</h3>
+            <p>Designing and consuming HTTP APIs cleanly.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="section-index">04</span>
+          <h2 class="section-title" id="contact-title">Let's Build Something <span class="grad-text">Great</span></h2>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-info" data-reveal>
+            <p class="contact-lede">
+              Have an app idea, a product that needs a mobile home, or a Flutter codebase that
+              needs rescue? Tell me about it — I'll get back to you soon.
+            </p>
+            <ul class="contact-channels" role="list">
+              <li>
+                <a class="channel" href="https://github.com/shadow-dev" target="_blank" rel="noopener">
+                  <span class="ch-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5A3.9 3.9 0 0 1 6.8 8.7a3.6 3.6 0 0 1 .1-2.7s.9-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1a3.6 3.6 0 0 1 .1 2.7 3.9 3.9 0 0 1 1 2.8c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z" /></svg>
+                  </span>
+                  <span><em>GitHub</em>github.com/shadow-dev</span>
+                </a>
+              </li>
+              <li>
+                <a class="channel is-soon" href="#" aria-label="LinkedIn (coming soon)">
+                  <span class="ch-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" /><path d="M8 10.5V17M8 7.4v.2M12 17v-4a2.4 2.4 0 0 1 4.8 0v4" /></svg>
+                  </span>
+                  <span><em>LinkedIn</em><span class="soon-text">coming soon</span></span>
+                </a>
+              </li>
+              <li>
+                <a class="channel is-soon" href="#" aria-label="Email (coming soon)">
+                  <span class="ch-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" /><path d="m4 7 8 6 8-6" /></svg>
+                  </span>
+                  <span><em>Email</em><span class="soon-text">coming soon</span></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact-form glass-card" id="contact-form" data-reveal novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="cf-name">Name</label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" placeholder="Ada Lovelace" />
+                <p class="field-error" id="cf-name-error" role="alert"></p>
+              </div>
+              <div class="field">
+                <label for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="ada@example.com" />
+                <p class="field-error" id="cf-email-error" role="alert"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" placeholder="Tell me about your idea, timeline, and budget range…"></textarea>
+              <p class="field-error" id="cf-message-error" role="alert"></p>
+            </div>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <button class="btn btn-primary btn-wide" type="submit">
+              Send Message
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 18-8-8 18-2.5-7.5z" /></svg>
+            </button>
+            <p class="form-note">
+              No backend is connected yet, so this form won't send email. Reach me directly on
+              GitHub for now.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <a class="brand brand-sm" href="#home" aria-label="Shadow Dev — back to top">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <defs>
+            <linearGradient id="brand-g-sm" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#a78bfa" />
+              <stop offset="1" stop-color="#22d3ee" />
+            </linearGradient>
+          </defs>
+          <rect x="1.5" y="1.5" width="37" height="37" rx="10" fill="none" stroke="url(#brand-g-sm)" stroke-width="2" />
+          <path d="M24.5 13.5 31 20l-6.5 6.5" fill="none" stroke="url(#brand-g-sm)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+          <line x1="15" y1="24" x2="28" y2="24" stroke="url(#brand-g-sm)" stroke-width="2.4" stroke-linecap="round" />
+        </svg>
+        <span class="brand-name">Shadow <span class="brand-accent">Dev</span></span>
+      </a>
+      <p class="footer-note">© <span id="year">2026</span> Shadow Dev — crafted with HTML, CSS &amp; JavaScript.</p>
+      <ul class="socials" role="list">
+        <li><a class="social-link" href="https://github.com/shadow-dev" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5A3.9 3.9 0 0 1 6.8 8.7a3.6 3.6 0 0 1 .1-2.7s.9-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1a3.6 3.6 0 0 1 .1 2.7 3.9 3.9 0 0 1 1 2.8c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z" /></svg></a></li>
+        <li><a class="social-link is-soon" href="#" aria-label="LinkedIn (coming soon)"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" /><path d="M8 10.5V17M8 7.4v.2M12 17v-4a2.4 2.4 0 0 1 4.8 0v4" /></svg></a></li>
+        <li><a class="social-link is-soon" href="#" aria-label="Email (coming soon)"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" /><path d="m4 7 8 6 8-6" /></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
