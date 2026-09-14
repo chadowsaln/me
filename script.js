@@ -206,7 +206,7 @@
         formStatus.classList.add("is-success");
         formStatus.textContent =
           "Thanks! No backend is connected yet, so this form hasn't sent " +
-          "anything — please reach me on GitHub.";
+          "anything — please email me at chadowdev674@gmail.com.";
       }
       form.reset();
     });

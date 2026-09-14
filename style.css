@@ -1242,6 +1242,12 @@ ul {
   color: var(--text-faint);
 }
 
+.form-note a {
+  color: var(--cyan);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   border-top: 1px solid var(--border);
