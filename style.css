@@ -428,6 +428,15 @@ ul {
   transform: translateY(-2px);
 }
 
+.btn:active {
+  transform: translateY(0) scale(0.96);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+
 .btn-sm {
   padding: 9px 16px;
   font-size: 0.86rem;
@@ -556,6 +565,10 @@ ul {
   color: var(--text);
   border-color: var(--border-strong);
   transform: translateY(-2px);
+}
+
+.social-link:active {
+  transform: translateY(0) scale(0.96);
 }
 
 .social-link.is-soon {
@@ -876,7 +889,8 @@ ul {
     box-shadow 0.3s var(--ease);
 }
 
-.project-card:hover {
+.project-card:hover,
+.project-card:focus-within {
   transform: translateY(-6px);
   border-color: var(--border-strong);
   box-shadow: var(--shadow-glow);
@@ -1270,6 +1284,17 @@ ul {
   transform: none;
 }
 
+/* Staggered hero entrance (one-shot, sequence communicates hierarchy) */
+.hero-copy > [data-reveal] {
+  transition-delay: calc(var(--stagger, 0) * 90ms);
+}
+.hero-copy > [data-reveal]:nth-child(1) { --stagger: 0; }
+.hero-copy > [data-reveal]:nth-child(2) { --stagger: 1; }
+.hero-copy > [data-reveal]:nth-child(3) { --stagger: 2; }
+.hero-copy > [data-reveal]:nth-child(4) { --stagger: 3; }
+.hero-copy > [data-reveal]:nth-child(5) { --stagger: 4; }
+.hero-copy > [data-reveal]:nth-child(6) { --stagger: 5; }
+
 /* ============================================================
    Responsive
    ============================================================ */
@@ -1405,6 +1430,7 @@ ul {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
   }
 
   [data-reveal] {
