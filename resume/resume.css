@@ -1,0 +1,444 @@
+/* ============================================================
+   CV — print-first stylesheet
+   One document, two audiences: a screen reader/ATS reading the
+   text in order, and a sheet of A4. The margin rail carries what
+   a recruiter scans for (dates, stack, repo path) so the main
+   column can stay prose.
+   ============================================================ */
+
+:root {
+  /* paper & ink */
+  --paper: #fdfcff;
+  --ink: #14161f;
+  --ink-soft: #454a5e;
+  --ink-rail: #767c93;
+  --rule: #e3e2ee;
+  --rule-soft: #efeee6;
+  --accent: #5b3df5;
+
+  /* type — same families as the portfolio */
+  --display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --rail: 106px;
+  --gutter: 16px;
+  --leading: 1.42;
+}
+
+@page {
+  size: A4;
+  margin: 13mm 14mm 12mm;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 28px 16px 56px;
+  background: #e8e7ee;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 13px;
+  line-height: var(--leading);
+  font-feature-settings: "kern" 1, "liga" 1, "cv05" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  padding-bottom: 0.5px;
+}
+
+a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+a:focus-visible,
+a:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---------- the sheet ---------- */
+
+.sheet {
+  position: relative;
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 14mm 15mm 12mm;
+  background: var(--paper);
+  box-shadow: 0 1px 2px rgba(20, 22, 31, 0.08), 0 24px 60px -30px rgba(20, 22, 31, 0.45);
+  overflow: hidden;
+}
+
+/* single brand flourish: the portfolio's violet→blue→cyan rule */
+.sheet::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, #7c5cff 0%, #4f7cf7 52%, #22b8d4 100%);
+}
+
+/* ---------- masthead ---------- */
+
+.masthead {
+  padding-bottom: 11px;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 10px 24px;
+}
+
+.masthead h1 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.018em;
+}
+
+.masthead .role {
+  margin: 5px 0 0;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  letter-spacing: 0.004em;
+}
+
+.contact {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 2px;
+  font-family: var(--mono);
+  font-size: 9.6px;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-rail);
+  text-align: right;
+  line-height: 1.5;
+}
+
+.contact a {
+  border-bottom-color: transparent;
+  color: var(--ink-soft);
+}
+
+.contact a:hover {
+  color: var(--accent);
+}
+
+/* ---------- sections ---------- */
+
+.section {
+  margin-top: 10px;
+}
+
+.section > h2 {
+  margin: 0 0 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--rule-soft);
+  font-family: var(--body);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.045em;
+  text-transform: none;
+  color: var(--ink-rail);
+}
+
+/* the intro paragraph sits on the same measure as the entry bodies */
+.intro {
+  margin: 0 0 0 calc(var(--rail) + var(--gutter));
+  max-width: 62ch;
+  color: var(--ink-soft);
+  font-size: 11.2px;
+  line-height: 1.47;
+  text-wrap: pretty;
+}
+
+/* ---------- entries with margin rail ---------- */
+
+/* DOM order is body-first (title, then bullets) so text extraction and
+   screen readers meet the entry before its metadata; the grid puts the
+   rail back on the left for the page. */
+.entry {
+  display: grid;
+  grid-template-columns: var(--rail) 1fr;
+  column-gap: var(--gutter);
+  padding: 4px 0 5px;
+}
+
+.entry > .rail {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.entry > div:not(.rail) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.entry + .entry {
+  border-top: 1px solid var(--rule-soft);
+}
+
+.entry:first-of-type {
+  padding-top: 2px;
+}
+
+/* rail: dates, stack, repo path — monospace because it is code-shaped */
+.rail {
+  font-family: var(--mono);
+  font-size: 9.1px;
+  line-height: 1.5;
+  color: var(--ink-rail);
+  font-variant-numeric: tabular-nums;
+  padding-top: 2px;
+}
+
+.rail .when {
+  display: block;
+  font-size: 9.5px;
+  color: var(--ink-soft);
+}
+
+.rail .where {
+  display: block;
+  margin-top: 3px;
+}
+
+.rail .where a {
+  border-bottom-color: transparent;
+}
+
+.rail .where a:hover {
+  color: var(--accent);
+}
+
+/* body column */
+.entry h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: -0.006em;
+}
+
+.entry h3 .stack {
+  font-family: var(--body);
+  font-size: 10.2px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--ink-rail);
+  margin-left: 8px;
+  white-space: nowrap;
+}
+
+.entry p {
+  margin: 2px 0 0;
+  color: var(--ink-soft);
+  font-size: 11px;
+  line-height: 1.46;
+}
+
+.entry ul {
+  margin: 3px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1px;
+}
+
+.entry li {
+  position: relative;
+  padding-left: 12px;
+  font-size: 11px;
+  line-height: 1.46;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+
+.entry li::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 0.62em;
+  width: 4px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.entry li strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ---------- toolkit ---------- */
+
+.toolkit {
+  display: grid;
+  grid-template-columns: var(--rail) 1fr;
+  column-gap: var(--gutter);
+  row-gap: 4px;
+  align-items: baseline;
+}
+
+.toolkit dt {
+  font-family: var(--mono);
+  font-size: 9.1px;
+  line-height: 1.5;
+  color: var(--ink-rail);
+  margin: 0;
+}
+
+.toolkit dd {
+  grid-column: 2;
+}
+
+.toolkit dd {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+.toolkit dd b {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ---------- footer note ---------- */
+
+.colophon {
+  margin-top: 16px;
+  padding-top: 7px;
+  border-top: 1px solid var(--rule-soft);
+  font-family: var(--mono);
+  font-size: 9.1px;
+  color: var(--ink-rail);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* ---------- print ---------- */
+
+@media print {
+  html,
+  body {
+    background: #fff;
+  }
+
+  body {
+    padding: 0;
+    font-size: 12px;
+  }
+
+  .sheet {
+    width: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .sheet::before {
+    /* stays inside the page box so it prints on sheet one */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .entry,
+  .toolkit,
+  .masthead {
+    break-inside: avoid;
+  }
+
+  .section > h2 {
+    break-after: avoid;
+  }
+
+  a {
+    border-bottom: none;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  body {
+    padding: 12px 0 32px;
+  }
+
+  .sheet {
+    width: 100%;
+    min-height: 0;
+    padding: 22px 18px 24px;
+  }
+
+  .masthead {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .contact {
+    text-align: left;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 0 12px;
+    flex-wrap: wrap;
+  }
+
+  .entry,
+  .toolkit {
+    grid-template-columns: 1fr;
+    row-gap: 3px;
+  }
+
+  .rail {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-top: 0;
+  }
+
+  .rail .where {
+    margin-top: 0;
+  }
+
+  .intro {
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
